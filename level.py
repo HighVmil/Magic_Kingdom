@@ -21,13 +21,13 @@ class Level:
 
 	def create_map(self):
 		layouts = {
-			'boundary': import_csv_layout('magic kingdom/map/map_FloorBlocks.csv'),
-			'grass': import_csv_layout('magic kingdom/map/map_Grass.csv'),
-			'object': import_csv_layout('magic kingdom/map/map_Objects.csv'),
+			'boundary': import_csv_layout('magic-kingdom/map/map_FloorBlocks.csv'),
+			'grass': import_csv_layout('magic-kingdom/map/map_Grass.csv'),
+			'object': import_csv_layout('magic-kingdom/map/map_Objects.csv'),
 		}
 		graphics = {
-			'grass': import_folder('magic kingdom/graphics/Grass'),
-			'objects': import_folder('magic kingdom/graphics/objects')
+			'grass': import_folder('magic-kingdom/graphics/Grass'),
+			'objects': import_folder('magic-kingdom/graphics/objects')
 		}
 
 		for style,layout in layouts.items():
@@ -47,10 +47,12 @@ class Level:
 							Tile((x,y),[self.visible_sprites,self.obstacle_sprites],'object',surf)
 
 		self.player = Player((2000,1430),[self.visible_sprites],self.obstacle_sprites)
+	
 	def run(self):
 		# update and draw the game
 		self.visible_sprites.custom_draw(self.player)
 		self.visible_sprites.update()
+		debug(self.player.status)
 
 
 class YSortCameraGroup(pygame.sprite.Group):
@@ -64,7 +66,7 @@ class YSortCameraGroup(pygame.sprite.Group):
 		self.offset = pygame.math.Vector2()
 
 		# creating the floor
-		self.floor_surf = pygame.image.load('magic kingdom/graphics/tilemap/ground.png').convert()
+		self.floor_surf = pygame.image.load('magic-kingdom/graphics/tilemap/ground.png').convert()
 		self.floor_rect = self.floor_surf.get_rect(topleft = (0,0))
 
 	def custom_draw(self,player):
