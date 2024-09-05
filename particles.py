@@ -6,37 +6,37 @@ class AnimationPlayer:
 	def __init__(self):
 		self.frames = {
 			# magic
-			'flame': import_folder('magic-kingdom/graphics/particles/flame/frames'),
-			'aura': import_folder('magic-kingdom/graphics/particles/aura'),
-			'heal': import_folder('magic-kingdom/graphics/particles/heal/frames'),
+			'flame': import_folder('magic_kingdom/graphics/particles/flame/frames'),
+			'aura': import_folder('magic_kingdom/graphics/particles/aura'),
+			'heal': import_folder('magic_kingdom/graphics/particles/heal/frames'),
 			
 			# attacks 
-			'claw': import_folder('magic-kingdom/graphics/particles/claw'),
-			'slash': import_folder('magic-kingdom/graphics/particles/slash'),
-			'sparkle': import_folder('magic-kingdom/graphics/particles/sparkle'),
-			'leaf_attack': import_folder('magic-kingdom/graphics/particles/leaf_attack'),
-			'thunder': import_folder('magic-kingdom/graphics/particles/thunder'),
+			'claw': import_folder('magic_kingdom/graphics/particles/claw'),
+			'slash': import_folder('magic_kingdom/graphics/particles/slash'),
+			'sparkle': import_folder('magic_kingdom/graphics/particles/sparkle'),
+			'leaf_attack': import_folder('magic_kingdom/graphics/particles/leaf_attack'),
+			'thunder': import_folder('magic_kingdom/graphics/particles/thunder'),
 
 			# monster deaths
-			'squid': import_folder('magic-kingdom/graphics/particles/smoke_orange'),
-			'raccoon': import_folder('magic-kingdom/graphics/particles/raccoon'),
-			'spirit': import_folder('magic-kingdom/graphics/particles/nova'),
-			'bamboo': import_folder('magic-kingdom/graphics/particles/bamboo'),
+			'squid': import_folder('magic_kingdom/graphics/particles/smoke_orange'),
+			'raccoon': import_folder('magic_kingdom/graphics/particles/raccoon'),
+			'spirit': import_folder('magic_kingdom/graphics/particles/nova'),
+			'bamboo': import_folder('magic_kingdom/graphics/particles/bamboo'),
 			
 			# leafs 
 			'leaf': (
-				import_folder('magic-kingdom/graphics/particles/leaf1'),
-				import_folder('magic-kingdom/graphics/particles/leaf2'),
-				import_folder('magic-kingdom/graphics/particles/leaf3'),
-				import_folder('magic-kingdom/graphics/particles/leaf4'),
-				import_folder('magic-kingdom/graphics/particles/leaf5'),
-				import_folder('magic-kingdom/graphics/particles/leaf6'),
-				self.reflect_images(import_folder('magic-kingdom/graphics/particles/leaf1')),
-				self.reflect_images(import_folder('magic-kingdom/graphics/particles/leaf2')),
-				self.reflect_images(import_folder('magic-kingdom/graphics/particles/leaf3')),
-				self.reflect_images(import_folder('magic-kingdom/graphics/particles/leaf4')),
-				self.reflect_images(import_folder('magic-kingdom/graphics/particles/leaf5')),
-				self.reflect_images(import_folder('magic-kingdom/graphics/particles/leaf6'))
+				import_folder('magic_kingdom/graphics/particles/leaf1'),
+				import_folder('magic_kingdom/graphics/particles/leaf2'),
+				import_folder('magic_kingdom/graphics/particles/leaf3'),
+				import_folder('magic_kingdom/graphics/particles/leaf4'),
+				import_folder('magic_kingdom/graphics/particles/leaf5'),
+				import_folder('magic_kingdom/graphics/particles/leaf6'),
+				self.reflect_images(import_folder('magic_kingdom/graphics/particles/leaf1')),
+				self.reflect_images(import_folder('magic_kingdom/graphics/particles/leaf2')),
+				self.reflect_images(import_folder('magic_kingdom/graphics/particles/leaf3')),
+				self.reflect_images(import_folder('magic_kingdom/graphics/particles/leaf4')),
+				self.reflect_images(import_folder('magic_kingdom/graphics/particles/leaf5')),
+				self.reflect_images(import_folder('magic_kingdom/graphics/particles/leaf6'))
 				)
 			}
 	
@@ -44,13 +44,13 @@ class AnimationPlayer:
 		new_frames = []
 
 		for frame in frames:
-	 		flipped_frame = pygame.transform.flip(frame,True,False)
-	 		new_frames.append(flipped_frame)
+			flipped_frame = pygame.transform.flip(frame,True,False)
+			new_frames.append(flipped_frame)
 		return new_frames
 
 	def create_grass_particles(self,pos,groups):
-	 	animation_frames = choice(self.frames['leaf'])
-	 	ParticleEffect(pos,animation_frames,groups)
+		animation_frames = choice(self.frames['leaf'])
+		ParticleEffect(pos,animation_frames,groups)
 
 	def create_particles(self,animation_type,pos,groups):
 		animation_frames = self.frames[animation_type]

@@ -3,13 +3,18 @@ WIDTH    = 1280
 HEIGTH   = 720
 FPS      = 60
 TILESIZE = 64
+HITBOX_OFFSET = {
+	'player': -26,
+	'object': -40,
+	'grass': -10,
+	'invisible': 0}
 
 # ui 
 BAR_HEIGHT = 20
 HEALTH_BAR_WIDTH = 200
 ENERGY_BAR_WIDTH = 140
 ITEM_BOX_SIZE = 80
-UI_FONT = 'magic-kingdom/graphics/font/joystix.ttf'
+UI_FONT = 'magic_kingdom/graphics/font/joystix.ttf'
 UI_FONT_SIZE = 18
 
 # general colors
@@ -31,20 +36,20 @@ UPGRADE_BG_COLOR_SELECTED = '#EEEEEE'
 
 # weapons 
 weapon_data = {
-	'sword': {'cooldown': 100, 'damage': 15,'graphic':'magic-kingdom/graphics/weapons/sword/full.png'},
-	'lance': {'cooldown': 400, 'damage': 30,'graphic':'magic-kingdom/graphics/weapons/lance/full.png'},
-	'axe': {'cooldown': 300, 'damage': 20, 'graphic':'magic-kingdom/graphics/weapons/axe/full.png'},
-	'rapier':{'cooldown': 50, 'damage': 8, 'graphic':'magic-kingdom/graphics/weapons/rapier/full.png'},
-	'sai':{'cooldown': 80, 'damage': 10, 'graphic':'magic-kingdom/graphics/weapons/sai/full.png'}}
+	'sword': {'cooldown': 100, 'damage': 15,'graphic':'magic_kingdom/graphics/weapons/sword/full.png'},
+	'lance': {'cooldown': 400, 'damage': 30,'graphic':'magic_kingdom/graphics/weapons/lance/full.png'},
+	'axe': {'cooldown': 300, 'damage': 20, 'graphic':'magic_kingdom/graphics/weapons/axe/full.png'},
+	'rapier':{'cooldown': 50, 'damage': 8, 'graphic':'magic_kingdom/graphics/weapons/rapier/full.png'},
+	'sai':{'cooldown': 80, 'damage': 10, 'graphic':'magic_kingdom/graphics/weapons/sai/full.png'}}
 
 # magic
 magic_data = {
-	'flame': {'strength': 5,'cost': 20,'graphic':'magic-kingdom/graphics/particles/flame/fire.png'},
-	'heal' : {'strength': 20,'cost': 10,'graphic':'magic-kingdom/graphics/particles/heal/heal.png'}}
+	'flame': {'strength': 5,'cost': 20,'graphic':'magic_kingdom/graphics/particles/flame/fire.png'},
+	'heal' : {'strength': 20,'cost': 10,'graphic':'magic_kingdom/graphics/particles/heal/heal.png'}}
 
 # enemy
 monster_data = {
-	'squid': {'health': 100,'exp':100,'damage':20,'attack_type': 'slash', 'attack_sound':'magic-kingdom/audio/attack/slash.wav', 'speed': 3, 'resistance': 3, 'attack_radius': 80, 'notice_radius': 360},
-	'raccoon': {'health': 300,'exp':250,'damage':40,'attack_type': 'claw',  'attack_sound':'magic-kingdom/audio/attack/claw.wav','speed': 2, 'resistance': 3, 'attack_radius': 120, 'notice_radius': 400},
-	'spirit': {'health': 100,'exp':110,'damage':8,'attack_type': 'thunder', 'attack_sound':'magic-kingdom/audio/attack/fireball.wav', 'speed': 4, 'resistance': 3, 'attack_radius': 60, 'notice_radius': 350},
-	'bamboo': {'health': 70,'exp':120,'damage':6,'attack_type': 'leaf_attack', 'attack_sound':'magic-kingdom/audio/attack/slash.wav', 'speed': 3, 'resistance': 3, 'attack_radius': 50, 'notice_radius': 300}}
+	'squid': {'health': 100,'exp':100,'damage':20,'attack_type': 'slash', 'attack_sound':'magic_kingdom/audio/attack/slash.wav', 'speed': 3, 'resistance': 3, 'attack_radius': 80, 'notice_radius': 360},
+	'raccoon': {'health': 300,'exp':250,'damage':40,'attack_type': 'claw',  'attack_sound':'magic_kingdom/audio/attack/claw.wav','speed': 2, 'resistance': 3, 'attack_radius': 120, 'notice_radius': 400},
+	'spirit': {'health': 100,'exp':110,'damage':8,'attack_type': 'thunder', 'attack_sound':'magic_kingdom/audio/attack/fireball.wav', 'speed': 4, 'resistance': 3, 'attack_radius': 60, 'notice_radius': 350},
+	'bamboo': {'health': 70,'exp':120,'damage':6,'attack_type': 'leaf_attack', 'attack_sound':'magic_kingdom/audio/attack/slash.wav', 'speed': 3, 'resistance': 3, 'attack_radius': 50, 'notice_radius': 300}}
